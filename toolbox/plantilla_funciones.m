@@ -1,4 +1,4 @@
-function [output1, output2] = function_name(input1,input2,input3)
+%function [output1, output2] = function_name(input1,input2,input3) %%%Descomentar esta línea para convertir el script en función
 %FUNCTION_NAME - One line description of what the function or script performs (H1 line)
 %=========================================================================================
 % Optional file header info (to give more details about the function than in the H1 line)
@@ -31,8 +31,9 @@ function [output1, output2] = function_name(input1,input2,input3)
 %
 % See also: OTHER_FUNCTION_NAME1, OTHER_FUNCTION_NAME2
 %
-% $Full name $
+% $Laboratorio de Oceanografía Física $
 % $Instituto de Ciencias Marinas y Limnológicas | Universidad Austral de Chile $
-% $jgarces@docentes.uach.cl | jose.garces.vargas@gmail.com $
+% $lab.oceanografia.fisica@gmail.com $
+% $https://github.com/Laboratorio-Oceanografia-Fisica-UACh $
 % $http://www.icml.uach.cl © $
 %=========================================================================================
