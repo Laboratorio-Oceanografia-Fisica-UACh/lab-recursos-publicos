@@ -20,6 +20,7 @@ En nuestro laboratorio hemos creado este espacio para compartir con la comunidad
 - **`toolbox/`**: Funciones comunes creadas por el laboratorio. Como la plantilla del LOFA para estandarizar la creación de nuevas funciones.
 - **`plantillas/`**: Formatos y recursos de diseño estandarizados para la comunicación científica del laboratorio.
 
+
 ---
 
 ## Cómo usar este repo?
