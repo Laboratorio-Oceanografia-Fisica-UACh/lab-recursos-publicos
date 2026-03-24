@@ -1,4 +1,4 @@
-%function [output1, output2] = function_name(input1,input2,input3) %%%Descomentar esta línea para convertir el script en función
+%function [output1, output2] = function_name(input1,input2,input3) %%%Uncomment this line for creating a function
 %FUNCTION_NAME - One line description of what the function or script performs (H1 line)
 %=========================================================================================
 % Optional file header info (to give more details about the function than in the H1 line)
