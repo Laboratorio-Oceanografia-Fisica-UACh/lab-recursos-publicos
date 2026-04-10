@@ -5,7 +5,7 @@ disp('=== BALANCE DE CALOR OCEANICO ===');
 % Constantes
 rho = 1022.4;      % kg/m3
 Cp  = 3940;        % J/kg°C
-L   = 2.27e6;      % J/kg (convertido desde J/g)
+L   = 2.27e6;      % J/kg 
 
 % Selección de variable
 disp('Variable a calcular:');
