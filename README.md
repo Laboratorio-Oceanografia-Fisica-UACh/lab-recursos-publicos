@@ -20,6 +20,7 @@ En nuestro laboratorio hemos creado este espacio para compartir con la comunidad
   - `descargar_era5/` — Plantilla para descargar datos ERA5 desde Copernicus CDS para cualquier región y período.
   - `extraer_modis_gee/` — Plantilla para extraer SST u otras variables de MODIS Aqua vía Google Earth Engine.
   - `indices_surgencia/` — Calcula el Índice de Upwelling de Ekman (IUE) desde datos de viento ERA5. Genera serie temporal y CSV.
+  - `graficos_oceanograficos/` — Plantillas de visualización: mapa SST con cartopy, ciclo estacional mensual y serie de anomalías con relleno.
 - **`toolbox/`**: Funciones importables para usar en tus propios scripts y notebooks.
   - `balance_calor.m` / `balance_calor.py` — Funciones para calcular los componentes del balance de calor (Qt, dH, Qlat, Qsen, Qv…).
   - `lofa_style.py` — Configuración de estilo gráfico del LOFA: paleta de colores, rcParams y helper para guardar figuras.
