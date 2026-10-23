@@ -28,7 +28,7 @@ En nuestro laboratorio hemos creado este espacio para compartir con la comunidad
 - **`notebooks/`**: Tutoriales interactivos de Jupyter Notebook.
   - `intro_xarray_netcdf.ipynb` — Introducción a xarray: cómo abrir, explorar, seleccionar, calcular y graficar archivos NetCDF.
   - `balance_calor_ejemplo.ipynb` — Ejemplo guiado del balance de calor usando el toolbox del LOFA.
-- **`plantillas/`**: Formatos y recursos de diseño estandarizados para la comunicación científica del laboratorio.
+- **`plantilla-tesis-bima/`**: Plantilla LaTeX para la Tesis de Grado de Biología Marina (UACh), según las pautas de la Escuela y la portada del Anexo 3 del Reglamento de Tesis. Incluye un ZIP listo para subir a Overleaf y un README con las instrucciones paso a paso, tanto para Overleaf como para trabajar en tu computador.
 
 
 ---

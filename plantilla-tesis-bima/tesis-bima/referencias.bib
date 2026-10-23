@@ -1,0 +1,89 @@
+% =============================================================================
+%  referencias.bib — Literatura citada
+%
+%  Solo se incluye la literatura efectivamente citada en el texto (pauta).
+%  biblatex la ordena alfabéticamente y le da el formato que exige la Escuela.
+%
+%  Los cuatro ejemplos de abajo son los mismos que trae la pauta de la Escuela
+%  de Biología Marina, uno por cada tipo de entrada. Úsalos como molde.
+%
+%  Consejo: en Google Scholar, Web of Science, Scopus o el sitio de la revista
+%  busca la opción «Exportar / Cite → BibTeX» y pega el resultado aquí.
+% =============================================================================
+
+% ---- EN CASO DE REVISTA ----------------------------------------------------
+% Dayton, P. K., Currie, T. y Rosenthal, R. (1984). Path dynamics and
+% stability of some California kelp communities. Ecol. Monograph., 54, 252-289.
+@article{Dayton1984,
+  author  = {Dayton, Paul K. and Currie, Val and Rosenthal, Richard},
+  title   = {Path dynamics and stability of some {C}alifornia kelp communities},
+  journal = {Ecol. Monograph.},
+  year    = {1984},
+  volume  = {54},
+  pages   = {252--289},
+}
+
+% ---- EN CASO DE LIBRO ------------------------------------------------------
+% Conover, W. J. (1980). Practical non parametric statistics. 2ª Ed.
+% John Willey, New York.
+% (La edición solo se indica cuando no es la primera.)
+% Nota: el estilo APA ya no imprime la ciudad de edición, pero la pauta sí la
+% pide. Por eso la ciudad va dentro del propio campo «publisher».
+@book{Conover1980,
+  author    = {Conover, W. J.},
+  title     = {Practical non parametric statistics},
+  edition   = {2},
+  year      = {1980},
+  publisher = {John Willey, New York},
+}
+
+% ---- EN CASO DE TESIS ------------------------------------------------------
+% Villegas, J. E. (1988). Purificación y definición estructural de una
+% Historia "pequeña" asociada al DNA de espermios de Choromytilus chorus.
+% Tesis de Pregrado, Esc. de ..., Facultad de ..., Univ. Austral de Chile, xx pp.
+% (La Escuela no se menciona si se trata de Tesis de Magíster o Doctorado.)
+@thesis{Villegas1988,
+  author      = {Villegas, J. E.},
+  title       = {Purificación y definición estructural de una Historia
+                 «pequeña» asociada al {DNA} de espermios de
+                 \mkbibemph{Choromytilus chorus}},
+  type        = {Tesis de Pregrado, Escuela de Biología Marina, Facultad de Ciencias},
+  institution = {Universidad Austral de Chile},
+  location    = {Valdivia, Chile},
+  year        = {1988},
+  pagetotal   = {xx},
+}
+
+% ---- EN CASO DE CAPÍTULO DE LIBRO ------------------------------------------
+% Permitin, Y. E. (1970). The consumption of krill by antarctic fishes.
+% En: Holgate, M. W. (ed) Antartic Ecology: 117-182. Academic Press, London.
+@incollection{Permitin1970,
+  author    = {Permitin, Y. E.},
+  title     = {The consumption of krill by antarctic fishes},
+  booktitle = {Antartic Ecology},
+  editor    = {Holgate, M. W.},
+  year      = {1970},
+  pages     = {117--182},
+  publisher = {Academic Press, London},
+}
+
+% ---- EJEMPLOS DE CITA EN EL TEXTO ------------------------------------------
+% Dos autores  -> (Becker y Ortiz, 1968)
+@article{BeckerOrtiz1968,
+  author  = {Becker, A. and Ortiz, B.},
+  title   = {Título del trabajo de dos autores},
+  journal = {Nombre Abreviado de la Revista},
+  year    = {1968},
+  volume  = {12},
+  pages   = {33--47},
+}
+
+% Más de dos autores -> (Becker et al., 1968)
+@article{Becker1968,
+  author  = {Becker, A. and Ortiz, B. and Cárdenas, C. and Díaz, D.},
+  title   = {Título del trabajo de más de dos autores},
+  journal = {Nombre Abreviado de la Revista},
+  year    = {1968},
+  volume  = {12},
+  pages   = {101--118},
+}

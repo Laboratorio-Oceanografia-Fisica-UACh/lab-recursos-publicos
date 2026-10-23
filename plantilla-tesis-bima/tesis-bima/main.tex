@@ -1,0 +1,69 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  TESIS DE GRADO — ESCUELA DE BIOLOGÍA MARINA
+%  Universidad Austral de Chile
+%
+%  Compilar con:   latexmk -pdf main.tex
+%  (o bien: pdflatex → biber → pdflatex → pdflatex)
+%
+%  Opciones de clase disponibles:
+%     [times]     Times New Roman — por defecto
+%     [arial]     Arial / Helvetica
+%     [borrador]  numera las líneas, útil para la revisión del profesor
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[times]{tesisbima}
+
+\input{config.tex}
+
+\begin{document}
+
+%==============================================================================
+% PORTADA  (Anexo 3 del Reglamento de Tesis)
+%==============================================================================
+\portada
+
+%==============================================================================
+% DEDICATORIA (opcional)
+%   Si no la quieres, comenta el \input de abajo.
+%==============================================================================
+\input{capitulos/00_dedicatoria}
+
+%==============================================================================
+% AGRADECIMIENTOS
+%==============================================================================
+\input{capitulos/01_agradecimientos}
+
+%==============================================================================
+% ÍNDICES  —  desde aquí la numeración es en romanos minúsculos (i, ii, iii…)
+%==============================================================================
+\iniciarpreliminares
+\indices
+
+%==============================================================================
+% LISTA DE ABREVIATURAS
+%==============================================================================
+\input{capitulos/02_abreviaturas}
+
+%==============================================================================
+% CUERPO  —  desde aquí la numeración es arábiga y parte en 1
+%==============================================================================
+\iniciarcuerpo
+
+\input{capitulos/03_resumen}          % 1. Resumen
+\input{capitulos/04_summary}          %    Summary
+\input{capitulos/05_introduccion}     % 2. Introducción
+\input{capitulos/06_materiales}       % 3. Materiales y Métodos
+\input{capitulos/07_resultados}       % 4. Resultados
+\input{capitulos/08_discusion}        % 5. Discusión
+
+%==============================================================================
+% 6. LITERATURA CITADA
+%==============================================================================
+\literaturacitada
+
+%==============================================================================
+% 7. ANEXOS (si corresponde)
+%==============================================================================
+\input{capitulos/09_anexos}
+
+\end{document}

@@ -20,6 +20,11 @@ env/
 era5_data/
 figuras/
 
+# Excepciones de la plantilla de tesis: el ZIP de Overleaf se distribuye desde
+# el repo, y su carpeta figuras/ va vacía a propósito (con un .gitkeep).
+!plantilla-tesis-bima/tesis-bima-overleaf.zip
+!plantilla-tesis-bima/tesis-bima/figuras/
+
 # Sistema operativo
 .DS_Store
 Thumbs.db

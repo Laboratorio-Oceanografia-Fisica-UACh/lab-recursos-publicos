@@ -1,0 +1,14 @@
+Pon en esta carpeta las figuras de tu tesis (.png, .pdf, .jpg).
+
+Luego insertalas desde cualquier capitulo con:
+
+    \figura[0.8\linewidth]{nombre.png}
+      {Titulo. Leyenda completa de la figura. Fuente: ...}
+      {etiqueta}
+
+y citalas en el texto con \reffig{etiqueta}.
+
+Llama al archivo solo por su nombre, sin la ruta: la plantilla ya sabe
+buscar aqui dentro.
+
+Puedes borrar este archivo cuando tengas tus propias figuras.

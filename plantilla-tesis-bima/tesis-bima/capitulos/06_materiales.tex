@@ -1,0 +1,78 @@
+%==============================================================================
+% 3. MATERIALES Y MÉTODOS
+%
+% Pauta: "Indicar el material utilizado, señalando su procedencia y los métodos
+% con la bibliografía correspondiente. Los métodos nuevos o modificaciones
+% deben describirse en detalle."
+%==============================================================================
+
+\chapter{Materiales y Métodos}
+
+\section{Área de estudio}
+
+Describe el área de estudio, sus coordenadas y sus características
+oceanográficas relevantes.
+
+% ---------------------------------------------------------------------------
+% EJEMPLO DE FIGURA
+%
+% Pauta: la numeración, el título y la leyenda van BAJO el cuerpo de la figura,
+% con números arábigos y en castellano. La figura debe ser autoexplicativa e
+% indicar la fuente si no es original.
+%
+% Atajo de la plantilla:
+%   \figura[ancho]{archivo}{Título. Leyenda…}{etiqueta}
+% ---------------------------------------------------------------------------
+%
+% \figura[0.8\linewidth]{area_estudio.png}
+%   {Área de estudio. Batimetría de la plataforma continental frente a
+%    Valdivia (39,8\textdegree\,S) y ubicación de las estaciones de muestreo
+%    (puntos negros). Fuente: elaboración propia a partir de GEBCO 2023.}
+%   {area-estudio}
+%
+% Y en el texto se cita así: «\dots como se muestra en la \reffig{area-estudio}»
+% o bien «\dots (\reffig{area-estudio})».
+
+\section{Origen de los datos}
+
+Indica la procedencia de cada conjunto de datos: sensor o instrumento, período,
+resolución espacial y temporal, y la referencia correspondiente.
+
+% ---------------------------------------------------------------------------
+% EJEMPLO DE TABLA
+%
+% Pauta: las Tablas se numeran con números ROMANOS EN MAYÚSCULAS y la
+% numeración, junto con el título, se incluye SOBRE el cuerpo de la Tabla.
+%
+% Atajo de la plantilla:
+%   \begin{tablabima}{Título de la tabla}{etiqueta} … \end{tablabima}
+% ---------------------------------------------------------------------------
+
+\begin{tablabima}{Conjuntos de datos utilizados, con su procedencia,
+  resolución y período de cobertura.}{datos}
+  \begin{tabular}{llll}
+    \toprule
+    \textbf{Producto} & \textbf{Variable} & \textbf{Resolución} & \textbf{Período} \\
+    \midrule
+    ERA5   & Viento a 10 m        & 0,25\textdegree{} / 1 h & 1990--2024 \\
+    MODIS  & Temperatura sup.\ del mar & 4 km / 1 d        & 2002--2024 \\
+    \bottomrule
+  \end{tabular}
+\end{tablabima}
+
+\noindent
+En el texto, la tabla se cita igual que una figura:
+«\dots los productos empleados se resumen en la \reftab{datos}».
+
+\section{Procesamiento y análisis}
+
+Describe en detalle los métodos aplicados, citando la bibliografía
+correspondiente \parencite{Conover1980}. Los métodos nuevos, o las
+modificaciones que hayas introducido a métodos existentes, deben quedar
+descritos con el suficiente detalle como para que otra persona pueda
+reproducirlos; el procedimiento sigue el descrito por \textcite{Villegas1988}
+y \textcite{Permitin1970}.
+
+Las unidades se escriben con \verb|siunitx|, por ejemplo
+\verb|\qty{12.4}{\degreeCelsius}| $\rightarrow$ \qty{12.4}{\degreeCelsius} o
+\verb|\qty{0.25}{\meter\per\second}| $\rightarrow$ \qty{0.25}{\meter\per\second}.

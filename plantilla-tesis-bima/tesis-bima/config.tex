@@ -1,0 +1,102 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  config.tex — DATOS DE TU TESIS
+%
+%  Este es el ÚNICO archivo que necesitas editar para personalizar la portada
+%  y los metadatos. No toques tesisbima.cls salvo que sepas lo que haces.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%------------------------------------------------------------------------------
+% TÍTULO Y AUTOR
+%   La portada los imprime en MAYÚSCULA y negrita automáticamente:
+%   escríbelos normal, con sus tildes.
+%------------------------------------------------------------------------------
+\titulotesis{Título de la tesis en mayúscula y negrita,
+             letra Times Roman 15--16, centrado}
+
+\autor{Nombre Completo del Estudiante}
+
+%------------------------------------------------------------------------------
+% PROFESOR PATROCINANTE
+%------------------------------------------------------------------------------
+\patrocinante{Dr. Nombre Apellido}
+\institutopatrocinante{Instituto de Ciencias Marinas y Limnológicas}
+\facultadpatrocinante{Facultad de Ciencias -- Universidad Austral de Chile}
+
+%------------------------------------------------------------------------------
+% PROFESOR CO-PATROCINANTE (si corresponde)
+%   Si no corresponde, deja los tres comandos con las llaves vacías:
+%   el bloque completo desaparece de la portada.
+%------------------------------------------------------------------------------
+\copatrocinante{}
+\institutocopatrocinante{}
+\facultadcopatrocinante{}
+
+% Ejemplo con co-patrocinante:
+% \copatrocinante{Dra. Nombre Apellido}
+% \institutocopatrocinante{Instituto de Ciencias Marinas y Limnológicas}
+% \facultadcopatrocinante{Facultad de Ciencias -- Universidad Austral de Chile}
+
+%------------------------------------------------------------------------------
+% CIUDAD Y AÑO
+%------------------------------------------------------------------------------
+\ciudad{Valdivia -- Chile}
+\anio{2026}
+
+%------------------------------------------------------------------------------
+% LOGOS DE LA PORTADA
+%
+%   El Anexo 3 del Reglamento muestra la portada SIN logos. Si tu comisión
+%   los pide (como en el formato del Proyecto de Tesis), descomenta el bloque
+%   de abajo. Para volver a la portada oficial exacta, deja \logosportada{}.
+%------------------------------------------------------------------------------
+\logosportada{}
+
+% --- Portada con logos (escudo UACh + logo del laboratorio) ---
+% \logosportada{%
+%   \includegraphics[height=2.2cm]{logos/escudo_uach.png}\hspace{1.2cm}%
+%   \includegraphics[height=2.2cm]{logos/logo_lab.png}%
+%   \\[0.5em]
+%   \normalsize Universidad Austral de Chile\\
+%   Facultad de Ciencias\\
+%   Escuela de Biología Marina
+% }
+%
+% En logos/ también está logo_uach_tiny_name.png (logo horizontal de la UACh
+% con el nombre), por si prefieres ese en vez del escudo.
+%
+% NOTA: en lab-recursos/logos no hay un logo del ICML. Cuando lo consigas,
+% cópialo a la carpeta logos/ de esta plantilla y reemplaza logo_lab.png.
+
+%------------------------------------------------------------------------------
+% TEXTO DEL GRADO
+%   Es el que exige el Anexo 3; cámbialo solo si tu Escuela lo indica.
+%------------------------------------------------------------------------------
+% \textogrado{Tesis de Grado presentada como parte de los requisitos para
+%   optar al grado de \textbf{Licenciado en Biología Marina} y
+%   \textbf{Título Profesional de Biólogo Marino.}}
+
+%------------------------------------------------------------------------------
+% METADATOS DEL PDF
+%------------------------------------------------------------------------------
+\hypersetup{
+  pdftitle  = {Título de la tesis},
+  pdfauthor = {Nombre Completo del Estudiante},
+  pdfsubject= {Tesis de Grado — Escuela de Biología Marina, UACh},
+  pdfkeywords = {biología marina, UACh, tesis}
+}
+
+%------------------------------------------------------------------------------
+% RUTAS DE FIGURAS Y ARCHIVO DE BIBLIOGRAFÍA
+%------------------------------------------------------------------------------
+\graphicspath{{figuras/}{logos/}}
+\addbibresource{referencias.bib}
+
+%------------------------------------------------------------------------------
+% AJUSTES OPCIONALES
+%------------------------------------------------------------------------------
+% Párrafos sin sangría y con espacio entre ellos (estilo Word):
+% \setlength{\parindent}{0pt}
+% \setlength{\parskip}{\baselineskip}
+
+% Mostrar hasta subsubsecciones (x.y.z) en el Índice General:
+% \setcounter{tocdepth}{3}
