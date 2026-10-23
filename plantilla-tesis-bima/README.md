@@ -230,8 +230,34 @@ La pauta acepta Times New Roman o Arial, ambas tamaño 12.
 
 ## Portada
 
-Por defecto la portada es la del **Anexo 3 del Reglamento**, que no lleva
-logos. Si tu comisión los pide, descomenta el bloque `\logosportada{...}` en `config.tex`.
+La portada sigue el **Anexo 3 del Reglamento**, con el logo institucional de la
+UACh arriba al centro y la Escuela debajo, que es como vienen las tesis de
+Biología Marina aprobadas. Todo se controla desde `config.tex`:
+
+- **Cambiar o sacar el logo:** en el bloque `\logosportada{...}` hay cuatro
+  variantes listas — logo UACh solo (la que viene activa), sin logo para el
+  Anexo 3 literal, UACh + ICML lado a lado, y escudo UACh + logo del
+  laboratorio. En `logos/` están todos los archivos, listados en `config.tex`
+  con una línea que explica cuál es cuál.
+- **Profesor co-patrocinante:** los tres comandos `\copatrocinante{}`,
+  `\institutocopatrocinante{}` y `\facultadcopatrocinante{}`. Si los dejas
+  vacíos, el bloque entero desaparece de la portada.
+- **Profesores informantes:** el comando `\informantes{}` recibe un bloque
+  libre, así que caben tantos como tenga tu comisión. El Anexo 3 solo menciona
+  al co-patrocinante, pero las tesis aprobadas suelen listar también a los
+  informantes, con su instituto y facultad.
+
+El bloque de profesores va en la mitad derecha de la página, alineado con el
+de la mención del grado, igual que en el Anexo 3 y en las tesis aprobadas.
+
+La portada cabe en una sola página incluso con patrocinante, co-patrocinante y
+dos informantes. Si tu comisión es más numerosa y se parte en dos, baja el
+ancho del logo en `config.tex` (de `6.5cm` a `5cm`, por ejemplo).
+
+> El título y el nombre del autor se imprimen en MAYÚSCULA automáticamente,
+> como pide la pauta — escríbelos normales en `config.tex`, con sus tildes.
+> (Algunas tesis aprobadas los dejan en minúscula; si tu comisión lo prefiere
+> así, quita los `\MakeUppercase` del comando `\portada` en `tesisbima.cls`.)
 
 ---
 

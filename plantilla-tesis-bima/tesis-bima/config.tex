@@ -37,21 +37,57 @@
 % \facultadcopatrocinante{Facultad de Ciencias -- Universidad Austral de Chile}
 
 %------------------------------------------------------------------------------
+% PROFESORES INFORMANTES (si corresponde)
+%   Bloque libre: pon tantos como tenga tu comisión, separados por \\[1em].
+%   Déjalo con las llaves vacías —\informantes{}— si no van en la portada.
+%------------------------------------------------------------------------------
+\informantes{}
+
+% Ejemplo con dos informantes:
+% \informantes{%
+%   Profesor Informante:\\
+%   Dra. Nombre Apellido\\
+%   Instituto de Ciencias Marinas y Limnológicas\\
+%   Facultad de Ciencias -- Universidad Austral de Chile
+%   \\[1em]
+%   Dr. Nombre Apellido\\
+%   Centro de Investigación en Ecosistemas de la Patagonia
+% }
+
+%------------------------------------------------------------------------------
 % CIUDAD Y AÑO
 %------------------------------------------------------------------------------
 \ciudad{Valdivia -- Chile}
 \anio{2026}
 
 %------------------------------------------------------------------------------
-% LOGOS DE LA PORTADA
+% LOGO DE LA PORTADA
 %
-%   El Anexo 3 del Reglamento muestra la portada SIN logos. Si tu comisión
-%   los pide (como en el formato del Proyecto de Tesis), descomenta el bloque
-%   de abajo. Para volver a la portada oficial exacta, deja \logosportada{}.
+%   Por defecto: logo institucional de la UACh arriba al centro, con la
+%   Escuela debajo. Es lo que llevan las tesis de Biología Marina aprobadas.
+%   (El Anexo 3 del Reglamento dibuja la portada sin logo; si tu comisión lo
+%   quiere así, usa la variante "sin logo" de más abajo.)
 %------------------------------------------------------------------------------
-\logosportada{}
+\logosportada{%
+  \includegraphics[width=6.5cm]{logos/logo_UACh_letras_negras.png}\\[0.4em]
+  \normalsize Escuela de Biología Marina
+}
+% Si tu comisión es muy numerosa y la portada se parte en dos páginas,
+% baja el ancho del logo (por ejemplo a 5cm).
 
-% --- Portada con logos (escudo UACh + logo del laboratorio) ---
+% --- Variante sin logo (portada exacta del Anexo 3) ---
+% \logosportada{}
+
+% --- Variante con logo UACh + logo del ICML, uno al lado del otro ---
+% \logosportada{%
+%   \raisebox{-0.5\height}{\includegraphics[width=5cm]{logos/logo_UACh_letras_negras.png}}%
+%   \hspace{1cm}%
+%   \raisebox{-0.5\height}{\includegraphics[width=4.5cm]{logos/logo_icml.png}}%
+%   \\[0.8em]
+%   \normalsize Escuela de Biología Marina
+% }
+
+% --- Variante con escudo UACh + logo del laboratorio, uno al lado del otro ---
 % \logosportada{%
 %   \includegraphics[height=2.2cm]{logos/escudo_uach.png}\hspace{1.2cm}%
 %   \includegraphics[height=2.2cm]{logos/logo_lab.png}%
@@ -61,11 +97,15 @@
 %   Escuela de Biología Marina
 % }
 %
-% En logos/ también está logo_uach_tiny_name.png (logo horizontal de la UACh
-% con el nombre), por si prefieres ese en vez del escudo.
-%
-% NOTA: en lab-recursos/logos no hay un logo del ICML. Cuando lo consigas,
-% cópialo a la carpeta logos/ de esta plantilla y reemplaza logo_lab.png.
+% Todo lo que hay en logos/ para armar tu propia combinación:
+%   logo_UACh_letras_negras.png    logo horizontal UACh (el que usa la portada)
+%   logo_UACh_letras_blancas.png   igual, para fondos oscuros
+%   logo_uach.png                  otra versión horizontal de la UACh
+%   logo_uach_tiny_name.png        versión compacta con el nombre al lado
+%   escudo_uach.png                solo el escudo
+%   logo_icml.png                  logo horizontal del ICML
+%   escudo_icml.png                solo el emblema circular del ICML
+%   logo_lab.png                   logo del LOFA
 
 %------------------------------------------------------------------------------
 % TEXTO DEL GRADO

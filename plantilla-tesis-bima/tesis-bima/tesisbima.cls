@@ -234,10 +234,20 @@
 \newcommand{\bima@anio}{\the\year}
 \newcommand{\anio}[1]{\renewcommand{\bima@anio}{#1}}
 
+% Profesores informantes u otros miembros de la comisión. Bloque libre, para
+% que quepan tantos como haga falta; va debajo del patrocinante. El Anexo 3
+% solo menciona al co-patrocinante, pero las tesis aprobadas suelen listar
+% también a los informantes.
+\newcommand{\bima@informantes}{}
+\newcommand{\informantes}[1]{\renewcommand{\bima@informantes}{#1}}
+
 % Logos de la portada. Déjalo vacío —\logosportada{}— para obtener la portada
 % exactamente como el Anexo 3 del Reglamento, que no lleva logos.
 \newcommand{\bima@logos}{}
 \newcommand{\logosportada}[1]{\renewcommand{\bima@logos}{#1}}
+
+% Ancho de los bloques alineados a la derecha (profesores y mención del grado)
+\newcommand{\bima@anchobloque}{0.55\textwidth}
 
 %------------------------------------------------------------------------------
 % PORTADA  (Anexo 3 del Reglamento de Tesis)
@@ -250,24 +260,35 @@
   \begin{titlepage}
   \thispagestyle{empty}
   \singlespacing
+  % Los espacios elásticos de abajo (\vfill) reparten el sobrante vertical;
+  % los fijos se mantienen chicos para que la portada quepa en UNA página
+  % aunque la comisión sea numerosa (patrocinante + co-patrocinante +
+  % varios informantes).
   \ifx\bima@logos\empty\else
     \begin{center}\bima@logos\end{center}
-    \vspace{0.6cm}
+    \vspace{0.5cm}
   \fi
-  % --- Bloque de profesores, arriba a la izquierda ---
-  \begin{flushleft}
-    Profesor Patrocinante:\\[0.2em]
+  % --- Bloque de profesores, en la mitad derecha de la página ---
+  \begin{flushright}
+  \begin{minipage}{\bima@anchobloque}
+    \raggedright
+    Profesor Patrocinante:\\
     \bima@patrocinante\\
     \bima@institutopat\\
     \bima@facultadpat
     \ifx\bima@copatrocinante\empty\else
-      \\[1.2em]
-      Profesor Co-patrocinante:\\[0.2em]
+      \\[1em]
+      Profesor Co-patrocinante:\\
       \bima@copatrocinante
       \ifx\bima@institutocopat\empty\else\\ \bima@institutocopat\fi
       \ifx\bima@facultadcopat\empty\else\\ \bima@facultadcopat\fi
     \fi
-  \end{flushleft}
+    \ifx\bima@informantes\empty\else
+      \\[1em]
+      \bima@informantes
+    \fi
+  \end{minipage}
+  \end{flushright}
   \vfill
   % --- Título: mayúscula, negrita, 15-16 pt, centrado ---
   \begin{center}
@@ -276,18 +297,17 @@
   \vfill
   % --- Mención del grado: bloque alineado a la derecha ---
   \begin{flushright}
-    \begin{minipage}{0.52\textwidth}
-      \raggedright\bima@grado
+    \begin{minipage}{\bima@anchobloque}
+      \bima@grado
     \end{minipage}
   \end{flushright}
   \vfill
   % --- Autor: mayúscula, negrita, 15-16 pt, centrado ---
   \begin{center}
-    {\fontsize{15}{20}\selectfont\bfseries\MakeUppercase{\bima@autor}}\\[1.6cm]
+    {\fontsize{15}{20}\selectfont\bfseries\MakeUppercase{\bima@autor}}\\[0.9cm]
     {\bfseries\MakeUppercase{\bima@ciudad}}\\[0.6em]
     {\bfseries\bima@anio}
   \end{center}
-  \vspace{0.4cm}
   \end{titlepage}
   % La portada, la dedicatoria y los agradecimientos no llevan número de
   % página: la numeración parte recién en el Índice General (pauta).
